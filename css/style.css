@@ -1649,6 +1649,13 @@ pre .xml .cdata {
 .ins-section .ins-search-item.active .ins-search-preview {
   color: #fff;
 }
+.service .service-container .service-item {
+  float: left;
+  width: 188px;
+  height: 188px;
+  margin: 0 9px 9px 0;
+  cursor: pointer;
+}
 #sidebar {
   padding-left: 12px;
 }
