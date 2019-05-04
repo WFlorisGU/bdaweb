@@ -175,7 +175,57 @@ var themeMenus = {};
                     
               <div id="content" class="outer">
                 
-                  <section id="main"></section>
+                  <section id="main"><div class="regist-div">
+    <h2>用户注册</h2>
+    <div class="regist-detail">
+        <form name="form1" method="post" action>
+            <table>
+                <tr class="detail-name">
+                    <td style="text-align: right;width:100px">用户名：</td>
+                    <td>
+                        <div><input type="text" size="14" name="username"></div>
+                    </td>
+                </tr>
+                <tr class="detail-name">
+                    <td style="text-align: right">密码：</td>
+                    <td>
+                        <div><input type="password" size="14" name="userpwd"></div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: right"> 确认密码：</td>
+                    <td>
+                        <div><input type="password" size="14" name="QRuserpwd"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right" class="detail-age">性别：</td>
+                    <td>
+                        <span style="margin-left: 13px;">男
+                            <input style="width:10px;margin-left:0px;" type="radio" size="14" name="usersex" value="0"></span>
+                        <span>女
+                            <input style="width:10px;margin-left:0px;" type="radio" size="14" name="usersex" value="1"></span>
+                        <span>保密
+                            <input style="width:10px;margin-left:0px;" checked type="radio" size="14" name="usersex" value="2"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">年龄：</td>
+                    <td>
+                        <div><input style="width:50px;" type="text" size="3" name="userage"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input class="regist-btn" type="button" value="注册">
+                        <input class="regist-btn" type="reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div></section>
                   <aside id="sidebar">
   
     <div class="widget-wrap" style="margin: 20px 0;">

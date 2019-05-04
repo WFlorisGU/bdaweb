@@ -266,6 +266,7 @@ object {
 	line-height: 1;
 	}
 .site-title a {
+	font-size: smaller;
 	color: #fff;
 	text-decoration: none;
 	}
@@ -274,6 +275,7 @@ object {
 	font-family: "Yanone Kaffeesatz", "Microsoft YaHei Light", Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	font-size: large;
 	}
 
 /* MENU
