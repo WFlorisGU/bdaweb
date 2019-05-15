@@ -13,7 +13,7 @@
   <!-- PACE Progress Bar START -->
 
   
-  <title>登录 | 大数据联盟数据资源服务平台</title>
+  <title>nextsignup | 大数据联盟数据资源服务平台</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
@@ -21,14 +21,14 @@
   
   <meta name="description" content="Data Resource Service Platform for Big Data Alliance">
 <meta property="og:type" content="website">
-<meta property="og:title" content="signin">
-<meta property="og:url" content="http://yoursite.com/signin/index.html">
+<meta property="og:title" content="nextsignup">
+<meta property="og:url" content="http://yoursite.com/nextsignup/index.html">
 <meta property="og:site_name" content="大数据联盟数据资源服务平台">
 <meta property="og:description" content="Data Resource Service Platform for Big Data Alliance">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-03T09:38:19.271Z">
+<meta property="og:updated_time" content="2019-05-13T02:22:00.064Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="signin">
+<meta name="twitter:title" content="nextsignup">
 <meta name="twitter:description" content="Data Resource Service Platform for Big Data Alliance">
   
     <link rel="alternate" href="/atom.xml" title="大数据联盟数据资源服务平台" type="application/atom+xml">
@@ -178,49 +178,130 @@ var themeMenus = {};
                     <div id="wrap">
                       
                         <div id="content" style="min-height:500px;">
-                            <div class="box-center">
+                             <div class="box-center">
+        <div class="register-wrap">
+            <div class="innner-wrap">
+                <div class="regist-div mb20">
+                    <h2>用户注册——身份信息</h2>
+                    <div class="regist-detail">
+                        <form name="form1" method="post" action>
+                            <table>
+                                <tr class="detail-name">
+                                    <td class="center">所在公司或组织：</td>
+                                    <td>
+                                        <div><textarea cols="2" row="15" name="usercomp" class="info-input"></textarea></div>
+                                    </td>
+                                </tr>
+                                <tr class="detail-name">
+                                    <td class="center">技术背景：</td>
+                                    <td>
+                                        <div><textarea cols="2" row="15" name="usertp" class="info-input"></textarea></div>
+                                    </td>
+                                </tr>
+                                <tr class="detail-name">
+                                    <td class="center">您觉得您是：</td>
+                                    <td>
+                                        <div>
+                                            <input type="radio" name="identity" value="requester" class="radio-setting">资源需求者
+                                            <input type="radio" name="identity" value="provider" class="radio-setting">服务提供者
+                                            <input type="radio" name="identity" value="others" class="radio-setting">暂不确定
+                                        </div>
+                                    </td>
+                                </tr>
 
-    <div class="center-wrap mb20">
-        <div class="inner-wrap cf">
-            <div class="log-div">
-                <h2 class="cf">用户登录</h2>
-                <div class="left-log fl">
-                    <form name="form1" method="post" action="cklogin.asp">
-                        <table border="0" cellspacing="0" cellpadding="7" align="center">
-                            <tr align="center">
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td align="center" class="td-center">
-                                    <input class="user" type="text" name="username" id="username" placeholder="登录账户">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="center" class="td-center">
-                                    <input class="pwd" style="margin-top:18px" type="password" name="password" id="password" placeholder="密码">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="log-situation">
-                                    <div class="fl"><a>新用户注册</a></div>
-                                    <div class="fr"><a>忘记密码</a></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="center" style="text-align:center">
-                                    <input class="submitbtn" type="submit" name="Submit" value="登录">
-                                </td>
-                            </tr>
-                        </table></form>
-                 </div>
-                <div class="right-QR fr">
-                    <img src="images/login/qr.png">
-                    <p>扫描关注大数据联盟公众号~了解更多资讯~~</p>
+                                <tr>
+                                    <td class="center"> 头像上传：</td>
+                                    <td>
+                                        <div class="con4">
+                                            <canvas class="img-cvs" id="cvs" width="100" height="100"></canvas> <span class="img-btn img-upload">上传头像<input type="file" class="upload_pic" id="upload"></span>
+                                        </div>
+                                        <script>
+                                            //获取上传按钮
+                                            var input1 = document.getElementById("upload");
+                                            if (typeof FileReader === 'undefined') {
+                                                //result.innerHTML = "抱歉，你的浏览器不支持 FileReader"; 
+                                                input1.setAttribute('disabled', 'disabled');
+                                            } else {
+                                                input1.addEventListener('change', readFile, false);
+                                                /*input1.addEventListener('change',function (e){
+                                            console.log(this.files);//上传的文件列表
+                                         },false); */
+                                            }
+
+                                            function readFile() {
+                                                var file = this.files[0]; //获取上传文件列表中第一个文件
+                                                if (!/image\/\w+/.test(file.type)) {
+                                                    //图片文件的type值为image/png或image/jpg
+                                                    alert("文件必须为图片！");
+                                                    return false;
+                                                }
+                                                // console.log(file);
+                                                var reader = new FileReader(); //实例一个文件对象
+                                                reader.readAsDataURL(file); //把上传的文件转换成url
+                                                //当文件读取成功便可以调取上传的接口
+                                                reader.onload = function(e) {
+                                                    // console.log(this.result);//文件路径
+                                                    // console.log(e.target.result);//文件路径
+                                                    /*var data = e.target.result.split(',');
+                                            var tp = (file.type == 'image/png')? 'png': 'jpg';
+                                            var imgUrl = data[1];//图片的url，去掉(data:image/png;base64,)
+                                            //需要上传到服务器的在这里可以进行ajax请求
+                                            // console.log(imgUrl);
+                                            // 创建一个 Image 对象 
+                                            var image = new Image();
+                                            // 创建一个 Image 对象 
+                                            // image.src = imgUrl;
+                                            image.src = e.target.result;
+                                            image.onload = function(){
+                                                document.body.appendChild(image);
+                                            }*/
+                                                    var image = new Image();
+                                                    // 设置src属性 
+                                                    image.src = e.target.result;
+                                                    var max = 200;
+                                                    // 绑定load事件处理器，加载完成后执行，避免同步问题
+                                                    image.onload = function() {
+                                                        // 获取 canvas DOM 对象 
+                                                        var canvas = document.getElementById("cvs");
+                                                        // 如果高度超标 宽度等比例缩放 *= 
+                                                        /*if(image.height > max) {
+                                                    image.width *= max / image.height; 
+                                                    image.height = max;
+                                                } */
+                                                        // 获取 canvas的 2d 环境对象, 
+                                                        var ctx = canvas.getContext("2d");
+                                                        // canvas清屏 
+                                                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+                                                        // 重置canvas宽高
+                                                        /*canvas.width = image.width;
+                                                canvas.height = image.height;
+                                                if (canvas.width>max) {canvas.width = max;}*/
+                                                        // 将图像绘制到canvas上
+                                                        // ctx.drawImage(image, 0, 0, image.width, image.height);
+                                                        ctx.drawImage(image, 0, 0, 100, 100);
+                                                        // 注意，此时image没有加入到dom之中
+                                                    };
+                                                }
+                                            };
+                                        </script>
+                                    </td>
+                                </tr>
+        
+                                <tr>
+                                    <td colspan="2" class="td-center">
+                                        
+                                                <a class href="/nextsignup"><input class="regist-btn" type="button" value="提交"></a>
+                                        
+                                            <input class="regist-btn" type="reset">
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
                 </div>
+
             </div>
         </div>
-    </div>
-
 </div>
                         </div>
                       

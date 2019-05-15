@@ -457,7 +457,7 @@ body {
 }
 .article-header h1 {
   margin: 0 0 3px 0;
-  font-size: 20px;
+  font-size: 26px;
   line-height: 1.2;
 }
 .article-header h1 a {
@@ -1660,66 +1660,6 @@ pre .xml .cdata {
   margin: 20px 0 40px;
   width: 100%;
 }
-.register-wrap {
-  overflow: hidden;
-  border-radius: 6px;
-}
-.inner-wrap {
-  height: 500px;
-  padding: 20px;
-  background: #fff;
-}
-.register-wrap .inner-wrap .regist-div {
-  width: 651px;
-  margin-right: auto;
-  margin-left: auto;
-}
-.register-wrap .inner-wrap .regist-div h2 {
-  text-align: center;
-  width: 200px;
-  margin-right: auto;
-  margin-left: auto;
-  font-size: 27px;
-  margin-bottom: 30px;
-}
-.register-wrap .inner-wrap .regist-div .regist-detail {
-  width: 651px;
-  margin-right: auto;
-  margin-left: auto;
-}
-.register-wrap .inner-wrap .regist-div .regist-detail table {
-  font-size: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-.register-wrap .inner-wrap .regist-div .regist-detail table .regist-btn {
-  width: 90px;
-  height: 35px;
-  line-height: 40px;
-  text-align: center;
-  background: #839b1b;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 16px;
-  color: #fff;
-  margin: 20px 10px 0px 45px;
-}
-.register-wrap .inner-wrap .regist-div .regist-detail input {
-  width: 220px;
-  height: 33px;
-  line-height: 40px;
-  border: 1px solid #d7d7d7;
-  border-radius: 3px;
-  vertical-align: middle;
-  padding-left: 5px;
-  color: #999;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  margin-left: 13px;
-}
-.register-wrap .inner-wrap .regist-div .regist-detail table tr td span {
-  margin-top: 100px;
-}
 .inner-wrap {
   padding: 20px;
   width: 100%;
@@ -1744,30 +1684,42 @@ pre .xml .cdata {
   padding-top: 55px;
   padding-left: 20px;
   padding-right: 20px;
+  display: block;
   font-size: 14px;
   width: 430px;
-  margin-right: auto;
-  margin-left: auto;
+  position: absolute;
+  left: 37%;
+  top: 50%;
+  margin-top: -215px;
+  margin-left: -215px;
+}
+.td-center {
+  text-align: center;
+}
+.center-wrap .inner-wrap .log-div .left-log table td {
+  border: 0px;
 }
 .center-wrap .inner-wrap .log-div .left-log input {
   height: 35px;
+  width: 245px;
   font-size: 14px;
   padding-left: 38px;
   line-height: 35px;
   border: 1px solid #bfbfbf;
-  width: 262px;
+  margin: 0px;
 }
 .center-wrap .inner-wrap .log-div .left-log .submitbtn {
-  width: 302px;
+  width: 262px;
   padding-left: 0px;
+  padding-top: 0px;
+  font-size: 16px;
   background-color: #ddd;
   text-align: center;
   color: #2b2b2b;
   border-radius: 3px;
-  margin-top: 38px;
 }
 .center-wrap .inner-wrap .log-div .left-log .log-situation {
-  padding-left: 38px;
+  padding: 18px 65px;
   margin-top: 16px;
   color: #2b2b2b;
   font-size: 15px;
@@ -1785,6 +1737,138 @@ pre .xml .cdata {
 .center-wrap .inner-wrap .log-div .right-QR img {
   width: 230px;
   height: 230px;
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.box-center {
+  width: 1020px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.register-wrap {
+  border-radius: 6px;
+}
+.innner-wrap {
+  padding: 20px;
+  background: #fff;
+}
+.register-wrap .regist-div {
+  width: 651px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.register-wrap .regist-div h2 {
+  text-align: center;
+  width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 27px;
+  margin-bottom: 30px;
+}
+.register-wrap .regist-div .regist-detail {
+  width: 651px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.regist-div .regist-detail table {
+  font-size: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.regist-div .regist-detail table .regist-btn {
+  width: 90px;
+  height: 35px;
+  line-height: 15px;
+  text-align: center;
+  background: #0376c2;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  margin: 20px 0px 20px 40px;
+}
+.regist-div .regist-detail input,
+.regist-div .regist-detail textarea {
+  width: 220px;
+  height: 33px;
+  border: 1px solid #d7d7d7;
+  border-radius: 3px;
+  vertical-align: middle;
+  padding-left: 14px;
+  color: #666;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+.regist-div .regist-detail .info-input {
+  height: 80px;
+  width: 305px;
+}
+.regist-div .regist-detail .radio-setting {
+  width: 15px;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+.regist-div .regist-detail table tr td {
+  vertical-align: middle;
+}
+.center {
+  text-align: right;
+  vertical-align: middle;
+  width: 40%;
+}
+.td-center {
+  text-align: center;
+}
+.regist-div .con4 {
+  width: 300px;
+  height: auto;
+  overflow: hidden;
+  margin: 20px 0;
+  color: #fff;
+}
+.regist-div .con4 .img-btn {
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #6c6c6c;
+  display: block;
+  font-size: 14px;
+  border-radius: 5px;
+}
+.regist-div .img-upload {
+  position: relative;
+}
+.regist-div .regist-detail .upload_pic {
+  display: block;
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  border-radius: 5px;
+}
+.regist-div .img-cvs {
+  border: 1px solid #d7d7d7;
+  margin: 20px 0;
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
 }
 #sidebar {
   padding-left: 12px;
@@ -1903,4 +1987,109 @@ pre .xml .cdata {
 .tagcloud a {
   margin-right: 5px;
   display: inline-block;
+}
+#centersidebar {
+  float: left;
+  width: 12%;
+  height: 100%;
+  background-color: #ddd;
+}
+.center-widget {
+  display: block;
+}
+#center-widget-tab {
+  height: 50px;
+  margin: 0px;
+  background: #333232;
+  font-color: #fff;
+  display: block;
+}
+.center-widget-content {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 100%;
+}
+.center-widget-content a {
+  color: #fff;
+  font-family: "Yanone Kaffeesatz", "方正姚体", Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  line-height: 50px;
+}
+.center-widget-tab li:hover {
+  background-color: #428bca;
+}
+.center-widget-tab li a:hover {
+  color: #000;
+}
+.center-content {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+#center-main {
+  display: inline-block;
+  float: right;
+  width: 78%;
+  margin-left: 50px;
+}
+.account-wrapper {
+  height: 100%;
+}
+.account-wrapper table .setting-head {
+  width: 150px;
+}
+.account-wrapper table tbody {
+  display: table-row-group;
+  vertical-align: middle;
+}
+.account-wrapper table tbody td {
+  padding: 20px 0;
+}
+.account-wrapper .avatar {
+  width: 100px;
+  height: 100px;
+  background-color: #ddd;
+  display: block;
+  cursor: pointer;
+}
+.account-wrapper .avatar img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+.account-wrapper .hide {
+  position: absolute;
+  display: block !important;
+  width: 82px;
+  opacity: 0;
+}
+.account-wrapper table tbody .btn-howllow {
+  border: 1px solid #0376c2;
+  color: #0376c2 !important;
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vartical-align: middle;
+  cursor: point;
+}
+.top-line {
+  padding-top: 1px;
+}
+.setting-title {
+  font-size: 15px;
+  color: #969696;
+}
+.account-wrapper .setting-save {
+  width: 100px;
+  margin: 30px 0 60px;
+  border-radius: 20px;
+  border: none;
+}
+.account-wrapper .btn-success {
+  color: #fff;
+  background-color: #0376c2;
 }
