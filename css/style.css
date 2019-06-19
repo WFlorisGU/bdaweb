@@ -1883,15 +1883,19 @@ pre .xml .cdata {
 }
 .bdiv {
   text-align: center;
-  background-color: #000;
-  color: #fff;
+  color: #000;
+  margin-bottom: 20px;
 }
 #main-div {
-  width: 100%;
+  width: 800%;
   margin: 0 auto;
   text-align: left;
   position: relative;
   -webkit-transform: translateY(-50%);
+  -webkit-transform: translate(50px, 100px);
+  -moz-transform: translate(50px, 100px);
+  -ms-transform: translate(50px, 100px);
+  transform: translate(50px, 100px);
 }
 #main-canvas {
   margin-bottom: 10px;
@@ -1900,14 +1904,14 @@ pre .xml .cdata {
   padding-bottom: 10px;
 }
 .field input {
-  position: absolute;
-  left: 70px;
+  color: #fff;
 }
 .title {
   font-size: 30px;
   text-align: center;
   display: block;
   margin: 30px 0;
+  color: #000;
 }
 #sidebar {
   padding-left: 12px;

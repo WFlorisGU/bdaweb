@@ -185,7 +185,7 @@ var themeMenus = {};
             <div class="log-div">
                 <h2 class="cf">用户登录</h2>
                 <div class="left-log fl">
-                    <form name="form1" method="post" action="cklogin.asp">
+                    <form name="form1" method="post" action="signin.html">
                         <table border="0" cellspacing="0" cellpadding="7" align="center">
                             <tr align="center">
                                 <td></td>
@@ -208,7 +208,7 @@ var themeMenus = {};
                             </tr>
                             <tr>
                                 <td align="center" style="text-align:center">
-                                    <input class="submitbtn" type="submit" name="Submit" value="登录">
+                                    <input class="submitbtn" id="login" type="submit" name="Submit" value="登录">
                                 </td>
                             </tr>
                         </table></form>
@@ -222,6 +222,36 @@ var themeMenus = {};
     </div>
 
 </div>
+
+<!-- Mainly scripts -->
+<script src="scripts/jquery-2.1.1.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+
+<script>
+    //用ajax提交表单
+    $('#login').click(function () {
+        $.post("/doLogin",{
+            "username" : $("#username").val(),
+            "password" : $("#password").val()
+
+        },function (result) {
+            result = "1";
+            if(result == "1"){
+                alert("登陆成功！跳转到首页！");
+                window.location.href = "/recording";
+            }else if(result == "-2"){
+                alert("密码错误");
+            }else if(result == "-1"){
+                alert("没有该用户");
+            }else if(result == "-3"){
+                alert("服务器错误！");
+            }else{
+                alert("未知原因，登陆失败");
+            }
+        });
+
+    });
+</script>
                         </div>
                       
                       <footer id="footer" class="site-footer">

@@ -181,17 +181,19 @@ var themeMenus = {};
                             <script type="text/javascript" src="../js/kmeans.js"></script>
 
 <div onload="init()" class="bdiv">
-	<div id="main">
-    	  <span class="title">K-Means算法</span>
+	<div id="main-iv">
+    	 <span class="title">K-Means算法</span>
       <canvas id="main-canvas" width="650" height="430"></canvas>
       <div class="field">
-	点数: <input id="numPoints" type="text" value="100">
-      </div>
+	       <div>点数:
+         <input id="numPoints" type="text" value="100">
+      </div></div> 
       <div class="field">
-	K值: <input id="numClusters" type="text" value="5">
-      </div>
+	      <div>K值:
+        <input id="numClusters" type="text" value="5">
+      </div></div>
       <input type="button" value="初始化" onclick="init()">
-      <input type="button" value="分步" onclick="update()">
+      <input type="button" value="分步" onclick="update()" style="margin-left: 10px;">
     </div>
 </div>
 
