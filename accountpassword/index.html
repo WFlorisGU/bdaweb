@@ -180,8 +180,52 @@ var themeMenus = {};
                       
                             <div id="content" style="min-height:500px;"><div class="center-content">
                               
-                                <section id="center-main">  
- 	<div class="account-wrapper">
+                                <section id="center-main"><script>
+	window.onload = function()
+                {
+                        var username = document.getElementById("div-username");
+                        var useremail = document.getElementById("div-useremail");
+                        var userpwd = document.getElementById("div-userpwd");
+                        var usercomp = document.getElementById("div-usercomp");
+                        var usertp = document.getElementById("div-usertp");
+                        var others = document.getElementById("div-others");
+
+
+                        username.value = "1506040211";
+                        useremail.value = "florislin@163.com";
+                        userpwd.value = "123456";
+                        usercomp.value = "111";
+                        usertp.value = "111";
+                        others.value = "无";
+
+                        localStorage.setItem("data-username", username.value);
+                        localStorage.setItem("data-useremail", useremail.value);
+                        localStorage.setItem("data-userpwd", userpwd.value);
+                        localStorage.setItem("data-usercomp", usercomp.value);
+                        localStorage.setItem("data-usertp", usertp.value);
+                        localStorage.setItem("data-others", others.value);
+                        
+                        var username = localStorage.getItem("data-username");
+                        var useremail = localStorage.getItem("data-useremail");
+                        var userpwd = localStorage.getItem("data-userpwd");
+                        var usercomp = localStorage.getItem("data-usercomp");
+                        var usertp = localStorage.getItem("data-usertp");
+                        var others = localStorage.getItem("data-others");
+                        
+                       	document.getElementById("div-username").textContent = username;
+                        document.getElementById("div-useremail").textContent = useremail;
+                        document.getElementById("div-userpwd").textContent = userpwd;
+                        document.getElementById("div-usertp").textContent = usertp;
+                        document.getElementById("div-others").textContent = others;
+                        document.getElementById("div-usercomp").textContent = usercomp;
+
+                }
+</script>
+
+  
+ 	
+
+<div class="account-wrapper">
 	<table>
 		<thead>
 			<th class="setting-head"></th>
@@ -189,32 +233,50 @@ var themeMenus = {};
 		</thead>
 		<tbody>
 			<tr>
-				<td class="top-line"><div class="avatar"><img src="/"></div></td>
+				<td class="top-line"><div class="avatar"><img src="https://raw.githubusercontent.com/WFlorisGU/music/master/photo/02.jpg"></div></td>
 				<td class="top-line"><a class="btn-howllow"><input unselectable="on" type="file" class="hide">更改头像</a></td>
 			</tr>
 			<tr>
 				<td class="setting-title">账户名称：</td>
-				<td><input type="text" placeholder="请输入昵称"></td>
+				<td class="top-line">
+					<span id="div-username"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a class="btn-howllow"><input id="getname" unselectable="on" type="button" class="hide">更改</a>
+				</td>
 			</tr>
 			<tr>
 				<td class="setting-title">电子邮箱：</td>
-				<td><input type="text" placeholder="请输入邮箱"></td>
+				<td class="top-line">
+					<span id="div-useremail"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a class="btn-howllow"><input id="getname" unselectable="on" type="button" class="hide">更改</a>
+				</td>
 			</tr>
 			<tr>
 				<td class="setting-title">密码：</td>
-				<td><input type="text" placeholder="请输入密码"></td>
+				<td class="top-line">
+					<span id="div-userpwd"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a class="btn-howllow"><input id="getname" unselectable="on" type="button" class="hide">更改</a>
+				</td>
 			</tr>
 			<tr>
 				<td class="setting-title">公司或组织：</td>
-				<td><input type="text" placeholder="请输入公司"></td>
+				<td class="top-line">
+					<span id="div-usercomp"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a class="btn-howllow"><input id="getname" unselectable="on" type="button" class="hide">更改</a>
+				</td>
 			</tr>
 			<tr>
 				<td class="setting-title">技术背景：</td>
-				<td><input type="text" placeholder="请输入技术背景"></td>
+				<td class="top-line">
+					<span id="div-usertp"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a class="btn-howllow"><input id="getname" unselectable="on" type="button" class="hide">更改</a>
+				</td>
 			</tr>
 			<tr>
 				<td class="setting-title">个人简介：</td>
-				<td><input type="text" placeholder="请输入简介，有助于获取任务"></td>
+				<td class="top-line">
+					<span id="div-others"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a class="btn-howllow"><input id="getname" unselectable="on" type="button" class="hide">更改</a>
+				</td>
 			</tr>
 		</tbody>
 	</table>

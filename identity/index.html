@@ -180,7 +180,49 @@ var themeMenus = {};
                       
                             <div id="content" style="min-height:500px;"><div class="center-content">
                               
-                                <section id="center-main"> 
+                                <section id="center-main"><script>
+	window.onload = function()
+                {
+                        var username = document.getElementById("div-username");
+                        var useremail = document.getElementById("div-useremail");
+                        var userpwd = document.getElementById("div-userpwd");
+                        var usercomp = document.getElementById("div-usercomp");
+                        var usertp = document.getElementById("div-usertp");
+                        var others = document.getElementById("div-others");
+
+
+                        username.value = "1506040211";
+                        useremail.value = "florislin@163.com";
+                        userpwd.value = "123456";
+                        usercomp.value = "111";
+                        usertp.value = "111";
+                        others.value = "无";
+
+                        localStorage.setItem("data-username", username.value);
+                        localStorage.setItem("data-useremail", useremail.value);
+                        localStorage.setItem("data-userpwd", userpwd.value);
+                        localStorage.setItem("data-usercomp", usercomp.value);
+                        localStorage.setItem("data-usertp", usertp.value);
+                        localStorage.setItem("data-others", others.value);
+                        
+                        var username = localStorage.getItem("data-username");
+                        var useremail = localStorage.getItem("data-useremail");
+                        var userpwd = localStorage.getItem("data-userpwd");
+                        var usercomp = localStorage.getItem("data-usercomp");
+                        var usertp = localStorage.getItem("data-usertp");
+                        var others = localStorage.getItem("data-others");
+                        
+                       	document.getElementById("div-username").textContent = username;
+                        document.getElementById("div-useremail").textContent = useremail;
+                        document.getElementById("div-userpwd").textContent = userpwd;
+                        document.getElementById("div-usertp").textContent = usertp;
+                        document.getElementById("div-others").textContent = others;
+                        document.getElementById("div-usercomp").textContent = usercomp;
+
+                }
+</script>
+
+ 
    	<div class="account-wrapper">
 	<table>
 		<thead>

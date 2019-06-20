@@ -179,7 +179,31 @@ var themeMenus = {};
                     <div id="wrap">
                       
                         <div id="content" style="min-height:500px;">
-                             <div class="box-center">
+                            <script type="text/javascript">
+    window.onload = function()
+    {	
+		var usercomp = document.getElementById("input-usercomp");
+        var usertp = document.getElementById("div-usertp");
+        var identity = document.getElementByName("identity");
+
+        var setData2 = document.getElementById("regist-btn2");
+
+        for(var i=0; i<identity.length; i ++){
+		   if(identity[i].checked){
+		    	alert(identity[i].value);
+		    	identity = 
+		   }
+		}
+
+		setData2.onclick = function()//存入数据
+            {
+	        	localStorage.setItem("data-usercomp", usercomp.value);
+	        	localStorage.setItem("data-usertp", usertp.value);
+	        	localStorage.setItem("data-identity", identity);
+            }
+	}
+
+ <div class="box-center">
         <div class="register-wrap">
             <div class="innner-wrap">
                 <div class="regist-div mb20">
@@ -285,25 +309,23 @@ var themeMenus = {};
                                                 }
                                             };
                                         </script>
-                                    </td>
-                                </tr>
+                                    
+                                
         
                                 <tr>
                                     <td colspan="2" class="td-center">
-                                        
-                                                <a class href="/bdaweb.github.io/nextsignup"><input class="regist-btn" type="button" value="提交"></a>
-                                        
+                                            <a class href="../center"><input id="regist-btn2" class="regist-btn" type="button" value="提交"></a>
                                             <input class="regist-btn" type="reset">
                                     </td>
                                 </tr>
-                            </table>
-                        </form>
-                    </div>
-                </div>
+                            
+                        
+                    
+                
 
-            </div>
-        </div>
-</div>
+            
+        
+
                         </div>
                       
                       <footer id="footer" class="site-footer">

@@ -194,7 +194,7 @@ function getSquareDistance(p1, p2) { //计算欧式距离
 function initCanvas() { //初始化画布
   var width = canvas.width;
   var height = canvas.height;
-  context.fillStyle = "#000000";
+  context.fillStyle = "#ece8d8";
   context.fillRect(0, 0, width, height); //
 }
 

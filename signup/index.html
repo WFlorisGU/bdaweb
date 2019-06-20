@@ -179,7 +179,51 @@ var themeMenus = {};
                     <div id="wrap">
                       
                         <div id="content" style="min-height:500px;">
-                             <div class="box-center">
+                            <script type="text/javascript">
+    window.onload = function()
+    {		
+    		
+            var username = document.getElementById("input-username");
+            var useremail = document.getElementById("input-useremail");
+            var userpwd = document.getElementById("input-userpwd");
+            var QRuserpwd = document.getElementById("input-QRuserpwd");
+            var usercomp = document.getElementById("input-usercomp");
+            /*var usertp = document.getElementById("div-usertp");
+            var identity = document.getElementByName("identity");
+
+            for(var i=0; i<identity.length; i ++){
+			   if(identity[i].checked){
+			    	alert(identity[i].value);
+			   }
+			 }*/
+
+
+            var setData = document.getElementById("regist-btn");
+            //var setData2 = document.getElementById("regist-btn2");
+
+            setData.onclick = function()//存入数据
+            {
+                    
+                    if(userpwd.value != QRuserpwd.value)
+                    {
+                         alert("请确保密码一致");
+                    }
+                    else if(userpwd.value && QRuserpwd.value && username.value && useremail.value)
+                    {
+                    	localStorage.setItem("data-username", username.value);
+                    	localStorage.setItem("data-useremail", useremail.value);
+                    	localStorage.setItem("data-userpwd", userpwd.value);
+                    }
+                    else{
+                    	alert("信息不能为空");
+                    }
+            }
+            
+            
+    }
+</script>
+
+ <div class="box-center">
         <div class="register-wrap mb20">
             <div class="innner-wrap">
                 <div class="regist-div">
@@ -190,32 +234,32 @@ var themeMenus = {};
                                 <tr class="detail-name">
                                     <td class="center">用户名：</td>
                                     <td>
-                                        <div><input type="text" size="14" name="username"></div>
+                                        <div><input type="text" size="14" name="username" id="input-username"></div>
                                     </td>
                                 </tr>
                                 <tr class="detail-name">
                                     <td class="center">邮箱：</td>
                                     <td>
-                                        <div><input type="text" size="14" name="usermail"></div>
+                                        <div><input type="text" size="14" name="usermail" id="input-useremail"></div>
                                     </td>
                                 </tr>
                                 <tr class="detail-name">
                                     <td class="center">密码：</td>
                                     <td>
-                                        <div><input type="password" size="14" name="userpwd"></div>
+                                        <div><input type="password" size="14" name="userpwd" id="input-userpwd"></div>
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <td class="center"> 确认密码：</td>
                                     <td>
-                                        <div><input type="password" size="14" name="QRuserpwd"></div>
+                                        <div><input type="password" size="14" name="QRuserpwd" id="input-QRuserpwd"></div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td colspan="2" class="td-center">
                                         
-                                                <a class href="/bdaweb.github.io/nextsignup"><input class="regist-btn" type="button" value="下一步"></a>
+                                                <a class href="/bdaweb.github.io/nextsignup"><input id="regist-btn" class="regist-btn" type="button" value="下一步"></a>
                                         
                                             <input class="regist-btn" type="reset">
                                     </td>
