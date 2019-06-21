@@ -180,35 +180,30 @@ var themeMenus = {};
                       
                         <div id="content" style="min-height:500px;">
                             <script type="text/javascript">
-    window.onload = function()
-    {		
-        var username = document.getElementById("input-username");
-        var useremail = document.getElementById("input-useremail");
-        var userpwd = document.getElementById("input-userpwd");
-        var QRuserpwd = document.getElementById("input-QRuserpwd");
-        var usercomp = document.getElementById("input-usercomp");
+    var username = document.getElementById("input-username");
+    var useremail = document.getElementById("input-useremail");
+    var userpwd = document.getElementById("input-userpwd");
+    var QRuserpwd = document.getElementById("input-QRuserpwd");
+   
+    var setDH = document.getElementById("regist-a");
 
-        var setData = document.getElementById("regist-btn");
-        var setDH = document.getElementById("regist-a");
-
-        setData.onclick = function()//存入数据
-        {
-                
-                if(userpwd.value != QRuserpwd.value)
-                {
-                     alert("请确保密码一致");
-                }
-                else if(userpwd.value && QRuserpwd.value && username.value && useremail.value)
-                {
-                	localStorage.setItem("data-username", username.value);
-                	localStorage.setItem("data-useremail", useremail.value);
-                	localStorage.setItem("data-userpwd", userpwd.value);
-                	setDH.herf = "../center";
-                }
-                else{
-                	alert("信息不能为空");
-                }
-        }
+    setDH.onclick = function()//存入数据
+    {
+            
+            if(userpwd.value != QRuserpwd.value)
+            {
+                 alert("请确保密码一致");
+            }
+            else if(userpwd.value && QRuserpwd.value && username.value && useremail.value)
+            {
+            	localStorage.setItem("data-username", username.value);
+            	localStorage.setItem("data-useremail", useremail.value);
+            	localStorage.setItem("data-userpwd", userpwd.value);
+            	setDH.herf = "../center";
+            }
+            else{
+            	alert("信息不能为空");
+            }
     }
 </script>
 
